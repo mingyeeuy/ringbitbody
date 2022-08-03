@@ -1,20 +1,20 @@
 radio.onReceivedNumber(function (receivedNumber) {
-    item = receivedNumber
+    itp = receivedNumber
 })
-let item = 0
-radio.setGroup(1)
+let itp = 0
+radio.setGroup(26)
 RingbitCar.init_wheel(AnalogPin.P1, AnalogPin.P2)
 let strip = neopixel.create(DigitalPin.P0, 2, NeoPixelMode.RGB)
 strip.setBrightness(255)
 basic.forever(function () {
-    if (item == 1) {
+    if (itp == 1) {
         RingbitCar.forward()
-    } else if (item == 2) {
+    } else if (itp == 2) {
         RingbitCar.turnleft()
-    } else if (item == 3) {
+    } else if (itp == 3) {
         RingbitCar.turnright()
     } else {
-        item = 0
+        itp = 0
         RingbitCar.brake()
     }
 })
