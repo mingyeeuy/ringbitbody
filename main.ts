@@ -2,7 +2,7 @@ radio.onReceivedNumber(function (receivedNumber) {
     itp = receivedNumber
 })
 let itp = 0
-radio.setGroup(26)
+radio.setGroup(11)
 RingbitCar.init_wheel(AnalogPin.P1, AnalogPin.P2)
 let strip = neopixel.create(DigitalPin.P0, 2, NeoPixelMode.RGB)
 strip.setBrightness(255)
